@@ -20,7 +20,9 @@ This R script will perform the following tasks (as indicated in the course proje
 **tidyDataset.txt**
 Project result, tidy data set with the average of each variable for each activity and each subject, as indicated in the project description.
 
-##How to the tidy dataset:
+Inertial folder will be ignored as, in the end, they're not related to the mean or the standard deviation we want to obtain
+
+###How to read the tidy dataset:
 As David Hood points out in his excellent 'David's personal course project FAQ' in the Course forum, the tidy data can't be read 'as is' using notepad or a similar text editor. Thus, if you want to read the resulting txt file please use this code: 
 
 `data <- read.table(file_path, header = TRUE) #if they used some other way of saving the file than a default write.table, this step will be different
