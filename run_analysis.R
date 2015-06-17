@@ -88,5 +88,7 @@ for(subject in 1:30) ##for loop to make the filtering
   for(activity in acNames)
   {
     tempData <- filter(filteredData,Subject==subject,Activity==activity) ##Retrieve the data for the corresponding filter
+    ##TODO: put names for the subject and activity cols, append data to dataset
+    c(subject,activity,sapply(tempData[2:87],"mean")) ##Build current row, apply mean value for each one of the variables, discarding subject and activity cols
   }
 }  
