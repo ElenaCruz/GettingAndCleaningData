@@ -17,7 +17,6 @@
 ##-----------------------------------------------------------------------------------------------------------------------------------------------------
 
 library(dplyr)
-library(plyr)
 
 ## STEP 0: Retrieve raw data in a good shape, so we can merge files later
 ## Configuration data (folder names, tags for each folder...)
