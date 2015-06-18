@@ -1,4 +1,4 @@
-# Data Dictionary - tidyDataset for Getting and cleaning data
+## Data Dictionary - tidyDataset for Getting and cleaning data
 1. **Subject** Subject which performed the activity 1..30
 2. **Activity** Activity that was performed
     - WALKING
@@ -7,72 +7,72 @@
     - SITTING
     - STANDING
     - LAYING
-3. **tBodyAcc.meanX** tBodyAcc.mean of the variable in the magnitude X
-4. **tBodyAcc.meanY** tBodyAcc.mean of the variable in the magnitude Y
-5. **tBodyAcc.meanZ** tBodyAcc.mean of the variable in the magnitude Z
-6. **tBodyAcc.stdX** tBodyAcc. standard deviation of the variable X
-7. **tBodyAcc.stdY** tBodyAcc. standard deviation of the variable Y
-8. **tBodyAcc.stdZ** tBodyAcc. standard deviation of the variable Z
-9. **tGravityAcc.meanX** tGravityAcc.mean of the variable in the magnitude X
-10. **tGravityAcc.meanY** tGravityAcc.mean of the variable in the magnitude Y
-11. **tGravityAcc.meanZ** tGravityAcc.mean of the variable in the magnitude Z
-12. **tGravityAcc.stdX** tGravityAcc. standard deviation of the variable X
-13. **tGravityAcc.stdY** tGravityAcc. standard deviation of the variable Y
-14. **tGravityAcc.stdZ** tGravityAcc. standard deviation of the variable Z
-15. **tBodyAccJerk.meanX** tBodyAccJerk.mean of the variable in the magnitude X
-16. **tBodyAccJerk.meanY** tBodyAccJerk.mean of the variable in the magnitude Y
-17. **tBodyAccJerk.meanZ** tBodyAccJerk.mean of the variable in the magnitude Z
-18. **tBodyAccJerk.stdX** tBodyAccJerk. standard deviation of the variable X
-19. **tBodyAccJerk.stdY** tBodyAccJerk. standard deviation of the variable Y
-20. **tBodyAccJerk.stdZ** tBodyAccJerk. standard deviation of the variable Z
-21. **tBodyGyro.meanX** tBodyGyro.mean of the variable in the magnitude X
-22. **tBodyGyro.meanY** tBodyGyro.mean of the variable in the magnitude Y
-23. **tBodyGyro.meanZ** tBodyGyro.mean of the variable in the magnitude Z
-24. **tBodyGyro.stdX** tBodyGyro. standard deviation of the variable X
-25. **tBodyGyro.stdY** tBodyGyro. standard deviation of the variable Y
-26. **tBodyGyro.stdZ** tBodyGyro. standard deviation of the variable Z
-27. **tBodyGyroJerk.meanX** tBodyGyroJerk.mean of the variable in the magnitude X
-28. **tBodyGyroJerk.meanY** tBodyGyroJerk.mean of the variable in the magnitude Y
-29. **tBodyGyroJerk.meanZ** tBodyGyroJerk.mean of the variable in the magnitude Z
-30. **tBodyGyroJerk.stdX** tBodyGyroJerk. standard deviation of the variable X
-31. **tBodyGyroJerk.stdY** tBodyGyroJerk. standard deviation of the variable Y
-32. **tBodyGyroJerk.stdZ** tBodyGyroJerk. standard deviation of the variable Z
-33. **tBodyAccMag.mean** tBodyAccMag.mean of the variable in the magnitude 
-34. **tBodyAccMag.std** tBodyAccMag. standard deviation of the variable 
-35. **tGravityAccMag.mean** tGravityAccMag.mean of the variable in the magnitude 
-36. **tGravityAccMag.std** tGravityAccMag. standard deviation of the variable 
-37. **tBodyAccJerkMag.mean** tBodyAccJerkMag.mean of the variable in the magnitude 
-38. **tBodyAccJerkMag.std** tBodyAccJerkMag. standard deviation of the variable 
-39. **tBodyGyroMag.mean** tBodyGyroMag.mean of the variable in the magnitude 
-40. **tBodyGyroMag.std** tBodyGyroMag. standard deviation of the variable 
-41. **tBodyGyroJerkMag.mean** tBodyGyroJerkMag.mean of the variable in the magnitude 
-42. **tBodyGyroJerkMag.std** tBodyGyroJerkMag. standard deviation of the variable 
-43. **fBodyAcc.meanX** fBodyAcc.mean of the variable in the magnitude X
-44. **fBodyAcc.meanY** fBodyAcc.mean of the variable in the magnitude Y
-45. **fBodyAcc.meanZ** fBodyAcc.mean of the variable in the magnitude Z
-46. **fBodyAcc.stdX** fBodyAcc. standard deviation of the variable X
-47. **fBodyAcc.stdY** fBodyAcc. standard deviation of the variable Y
-48. **fBodyAcc.stdZ** fBodyAcc. standard deviation of the variable Z
-49. **fBodyAccJerk.meanX** fBodyAccJerk.mean of the variable in the magnitude X
-50. **fBodyAccJerk.meanY** fBodyAccJerk.mean of the variable in the magnitude Y
-51. **fBodyAccJerk.meanZ** fBodyAccJerk.mean of the variable in the magnitude Z
-52. **fBodyAccJerk.stdX** fBodyAccJerk. standard deviation of the variable X
-53. **fBodyAccJerk.stdY** fBodyAccJerk. standard deviation of the variable Y
-54. **fBodyAccJerk.stdZ** fBodyAccJerk. standard deviation of the variable Z
-55. **fBodyGyro.meanX** fBodyGyro.mean of the variable in the magnitude X
-56. **fBodyGyro.meanY** fBodyGyro.mean of the variable in the magnitude Y
-57. **fBodyGyro.meanZ** fBodyGyro.mean of the variable in the magnitude Z
-58. **fBodyGyro.stdX** fBodyGyro. standard deviation of the variable X
-59. **fBodyGyro.stdY** fBodyGyro. standard deviation of the variable Y
-60. **fBodyGyro.stdZ** fBodyGyro. standard deviation of the variable Z
-61. **fBodyAccMag.mean** fBodyAccMag.mean of the variable in the magnitude 
-62. **fBodyAccMag.std** fBodyAccMag. standard deviation of the variable 
-63. **fBodyBodyAccJerkMag.mean** fBodyBodyAccJerkMag.mean of the variable in the magnitude 
-64. **fBodyBodyAccJerkMag.std** fBodyBodyAccJerkMag. standard deviation of the variable 
-65. **fBodyBodyGyroMag.mean** fBodyBodyGyroMag.mean of the variable in the magnitude 
-66. **fBodyBodyGyroMag.std** fBodyBodyGyroMag. standard deviation of the variable 
-67. **fBodyBodyGyroJerkMag.mean** fBodyBodyGyroJerkMag.mean of the variable in the magnitude 
-68. **fBodyBodyGyroJerkMag.std** fBodyBodyGyroJerkMag. standard deviation of the variable 
+3. **tBodyAcc.meanX** mean of the variable tBodyAcc in the X axis
+4. **tBodyAcc.meanY** mean of the variable tBodyAcc in the Y axis
+5. **tBodyAcc.meanZ** mean of the variable tBodyAcc in the Z axis
+6. **tBodyAcc.stdX** standard deviation of the variable tBodyAcc in the X axis
+7. **tBodyAcc.stdY** standard deviation of the variable tBodyAcc in the Y axis
+8. **tBodyAcc.stdZ** standard deviation of the variable tBodyAcc in the Z axis
+9. **tGravityAcc.meanX** mean of the variable tGravityAcc in the X axis
+10. **tGravityAcc.meanY** mean of the variable tGravityAcc in the Y axis
+11. **tGravityAcc.meanZ** mean of the variable tGravityAcc in the Z axis
+12. **tGravityAcc.stdX** standard deviation of the variable tGravityAcc in the X axis
+13. **tGravityAcc.stdY** standard deviation of the variable tGravityAcc in the Y axis
+14. **tGravityAcc.stdZ** standard deviation of the variable tGravityAcc in the Z axis
+15. **tBodyAccJerk.meanX** mean of the variable tBodyAccJerk in the X axis
+16. **tBodyAccJerk.meanY** mean of the variable tBodyAccJerk in the Y axis
+17. **tBodyAccJerk.meanZ** mean of the variable tBodyAccJerk  in the Z axis
+18. **tBodyAccJerk.stdX** standard deviation of the variable tBodyAccJerk in the X axis
+19. **tBodyAccJerk.stdY** standard deviation of the variable tBodyAccJerk in the Y axis
+20. **tBodyAccJerk.stdZ** standard deviation of the variable tBodyAccJerk in the Z axis
+21. **tBodyGyro.meanX** mean of the variable tBodyGyro in the X axis
+22. **tBodyGyro.meanY** mean of the variable tBodyGyro in the Y axis
+23. **tBodyGyro.meanZ** mean of the variable tBodyGyro in the Z axis
+24. **tBodyGyro.stdX** standard deviation of the variable tBodyGyro in the X axis
+25. **tBodyGyro.stdY** standard deviation of the tBodyGyro in the Y axis
+26. **tBodyGyro.stdZ** standard deviation of the tBodyGyro in the Z axis
+27. **tBodyGyroJerk.meanX** mean of the variable tBodyGyroJerk in the X axis
+28. **tBodyGyroJerk.meanY** mean of the variable tBodyGyroJerk in the Y axis
+29. **tBodyGyroJerk.meanZ** mean of the variable tBodyGyroJerk in the Z axis
+30. **tBodyGyroJerk.stdX** standard deviation of the variable tBodyGyroJerk in the X axis
+31. **tBodyGyroJerk.stdY** standard deviation of the variable tBodyGyroJerk in the Y axis
+32. **tBodyGyroJerk.stdZ** standard deviation of the variable tBodyGyroJerk in the Z axis
+33. **tBodyAccMag.mean** mean of the variable tBodyAccMag 
+34. **tBodyAccMag.std** standard deviation of the variable tBodyAccMag
+35. **tGravityAccMag.mean** mean of the variable tGravityAccMag
+36. **tGravityAccMag.std** standard deviation of the variable tGravityAccMag
+37. **tBodyAccJerkMag.mean** mean of the variable tBodyAccJerkMag
+38. **tBodyAccJerkMag.std** standard deviation of the variable tBodyAccJerkMag
+39. **tBodyGyroMag.mean** mean of the variable tBodyGyroMag 
+40. **tBodyGyroMag.std** standard deviation of the variable tBodyGyroMag
+41. **tBodyGyroJerkMag.mean** mean of the variable tBodyGyroJerkMag 
+42. **tBodyGyroJerkMag.std** standard deviation of the variable tBodyGyroJerkMag
+43. **fBodyAcc.meanX** mean of the variable fBodyAcc in the X axis
+44. **fBodyAcc.meanY** mean of the variable fBodyAcc in the Y axis
+45. **fBodyAcc.meanZ** mean of the variable fBodyAcc in the Z axis
+46. **fBodyAcc.stdX** standard deviation of the variable fBodyAcc in the X axis
+47. **fBodyAcc.stdY** standard deviation of the variable fBodyAcc in the Y axis
+48. **fBodyAcc.stdZ** standard deviation of the variable fBodyAcc in the Z axis
+49. **fBodyAccJerk.meanX** mean of the variable fBodyAccJerk in the X axis
+50. **fBodyAccJerk.meanY** mean of the variable fBodyAccJerk in the Y axis
+51. **fBodyAccJerk.meanZ** mean of the variable fBodyAccJerk in the Z axis
+52. **fBodyAccJerk.stdX** standard deviation of the variable fBodyAccJerk in the X axis
+53. **fBodyAccJerk.stdY** standard deviation of the variable fBodyAccJerk in the Y axis
+54. **fBodyAccJerk.stdZ** standard deviation of the variable fBodyAccJerk in the Z axis
+55. **fBodyGyro.meanX** mean of the variable fBodyGyro in the X axis
+56. **fBodyGyro.meanY** mean of the variable fBodyGyro in the Y axis
+57. **fBodyGyro.meanZ** mean of the variable fBodyGyro in the Z axis
+58. **fBodyGyro.stdX** standard deviation of the variable fBodyGyro in the X axis
+59. **fBodyGyro.stdY** standard deviation of the variable fBodyGyro in the Y axis
+60. **fBodyGyro.stdZ** standard deviation of the variable fBodyGyro in the Z axis
+61. **fBodyAccMag.mean** mean of the variable fBodyAccMag
+62. **fBodyAccMag.std**standard deviation of the variable fBodyAccMag
+63. **fBodyBodyAccJerkMag.mean** mean of the variable fBodyBodyAccJerkMag
+64. **fBodyBodyAccJerkMag.std** standard deviation of the variable fBodyBodyAccJerkMag
+65. **fBodyBodyGyroMag.mean** mean of the variable fBodyBodyGyroMag
+66. **fBodyBodyGyroMag.std** standard deviation of the variable fBodyBodyGyroMag
+67. **fBodyBodyGyroJerkMag.mean** mean of the variable fBodyBodyGyroJerkMag
+68. **fBodyBodyGyroJerkMag.std** standard deviation of the variable fBodyBodyGyroJerkMag
 
 
 For more information, please check full dataset description on the [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
