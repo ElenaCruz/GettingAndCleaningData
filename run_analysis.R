@@ -16,6 +16,8 @@
 ## https://github.com/ElenaCruz/GettingAndCleaningData
 ##-----------------------------------------------------------------------------------------------------------------------------------------------------
 
+library(dplyr)
+library(plyr)
 
 ## STEP 0: Retrieve raw data in a good shape, so we can merge files later
 ## Configuration data (folder names, tags for each folder...)
@@ -34,7 +36,7 @@ yFilePattern <- "y_%s.txt"
 ftNames <- read.table(file.path(folderName,featuresFile))
 
 ##Compose names for the datasets
-namesV <- c("Subject", sapply(ftNames$V2,as.character),"Activity")
+namesV <- c("Subject","Activity", sapply(ftNames$V2,as.character))
 namesV <- make.names(namesV) ##Get syntactically correct names
 
 ##Training set data loading
@@ -45,8 +47,8 @@ trXData <- read.table(file.path(folderName, trainTag, sprintf(xFilePattern,train
 ## 3. Read labels
 trYData <- read.table(file.path(folderName, trainTag, sprintf(yFilePattern,trainTag)))
 
-##Training dataframe composition
-trData <- cbind(trSubjData,trXData,trYData)
+##Training dataframe composition  (subject, activity, all other variables)
+trData <- cbind(trSubjData,trYData, trXData)
 names(trData) <- namesV
 
 ##Test set data loading
@@ -57,17 +59,17 @@ teXData <- read.table(file.path(folderName, testTag, sprintf(xFilePattern,testTa
 ## 3. Read labels
 teYData <- read.table(file.path(folderName, testTag, sprintf(yFilePattern,testTag)))
 
-##Test dataframe composition
-teData <- cbind(teSubjData,teXData,teYData)
+##Test dataframe composition (subject, activity, all other variables)
+teData <- cbind(teSubjData,teYData, teXData)
 names(teData) <- namesV
 
 ## STEP 1: Merge the training and the test sets to create one data set
 globalData <- rbind(trData, teData)
 
 ##STEP 2: Extract only the measurements on the mean and standard deviation for each measurement
-meanCols <- grep("mean",namesV, ignore.case=TRUE) ##Get the column indexes containing "mean"
-stdCols <- grep("std", namesV,ignore.case=TRUE) ##Get the column indexes containing "std"
-selectedCols <- c("Subject",namesV[sort(c(meanCols,stdCols))],"Activity") ##Build a vector with the names of the columns we want to keep (maintaining original order)
+meanCols <- grep("mean",namesV) ##Get the column indexes containing "mean", case sensitive
+stdCols <- grep("std", namesV) ##Get the column indexes containing "std", case sensitive
+selectedCols <- c("Subject","Activity", namesV[sort(c(meanCols,stdCols))]) ##Build a vector with the names of the columns we want to keep (maintaining original order)
 filteredData <- globalData[selectedCols]
 
 ##STEP 3: Use descriptive activity names to name the activities in the data set
@@ -83,12 +85,6 @@ filteredData[ ,"Activity"] <- factor(filteredData[ ,"Activity"], labels =acNames
 ##rather than numbers. The names are in a 'syntactically correct' form, so they can be used for selecting, etc.
 
 ##STEP 5:From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
-for(subject in 1:30) ##for loop to make the filtering
-{
-  for(activity in acNames)
-  {
-    tempData <- filter(filteredData,Subject==subject,Activity==activity) ##Retrieve the data for the corresponding filter
-    ##TODO: put names for the subject and activity cols, append data to dataset
-    c(subject,activity,sapply(tempData[2:87],"mean")) ##Build current row, apply mean value for each one of the variables, discarding subject and activity cols
-  }
-}  
+bySubAct <- filteredData %>% group_by(Subject, Activity) ##Group filtered data by subject and activity
+tidyData <- bySubAct %>% summarise_each(funs(mean)) ##Apply summarise_each to work with the whole set of columns
+ 
