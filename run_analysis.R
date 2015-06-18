@@ -67,8 +67,8 @@ names(teData) <- namesV
 globalData <- rbind(trData, teData)
 
 ##STEP 2: Extract only the measurements on the mean and standard deviation for each measurement
-meanCols <- grep("mean",namesV) ##Get the column indexes containing "mean", case sensitive
-stdCols <- grep("std", namesV) ##Get the column indexes containing "std", case sensitive
+meanCols <- grep("mean\\.",namesV) ##Get the column indexes containing "mean", case sensitive, using the '.' char to remove the meanFreq values
+stdCols <- grep("std\\.", namesV) ##Get the column indexes containing "std", case sensitive
 selectedCols <- c("Subject","Activity", namesV[sort(c(meanCols,stdCols))]) ##Build a vector with the names of the columns we want to keep (maintaining original order)
 filteredData <- globalData[selectedCols]
 
@@ -81,10 +81,14 @@ acNames <- sapply(acNames$V2,as.character)
 filteredData[ ,"Activity"] <- factor(filteredData[ ,"Activity"], labels =acNames) 
 
 ##STEP 4: Appropriately label the data set with descriptive variable names.
-##This step has been done as part of the extracting only the mean and std measures, as I was more comfortable working with column names 
-##rather than numbers. The names are in a 'syntactically correct' form, so they can be used for selecting, etc.
+##This step has been partially done as part of the extracting only the mean and std measures, as I was more comfortable working with column names 
+##rather than numbers. The names are in a 'syntactically correct' form, so they can be used for selecting, etc. Thus, I'll only remove the "..." and ".." 
+names(filteredData) <- gsub("\\.\\.\\.","",names(filteredData))
+names(filteredData) <- gsub("\\.\\.","",names(filteredData))
 
 ##STEP 5:From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
 bySubAct <- filteredData %>% group_by(Subject, Activity) ##Group filtered data by subject and activity
 tidyData <- bySubAct %>% summarise_each(funs(mean)) ##Apply summarise_each to work with the whole set of columns
+
+write.table(tidyData,file="tidyDataset.txt",row.name=FALSE)
  
