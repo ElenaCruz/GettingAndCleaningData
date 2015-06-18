@@ -26,7 +26,7 @@ As David Hood points out in his excellent 'David's personal course project FAQ' 
 `data <- read.table(file_path, header = TRUE) #if they used some other way of saving the file than a default write.table, this step will be different
 View(data)`
 
-##Steps that have been followed:
+##Steps that have been followed in the run_analysis.R file:
 1. **STEP 0:** Retrieve raw data in a good shape, so we can merge files later. This has been achieved by loading the three .txt files for each subset (train and test) of data, so they can be joined later in the following steps. Inertial folder will be ignored as, in the end, they're not related to the mean or the standard deviation we want to obtain.
  1. The first step has been to define a set of 'configuration data', that is, folder names, and file names to be used as part of the file retrieving process
  2. I have also defined a set of patterns that have been used to reuse code to load the train and tests subsets
@@ -45,5 +45,11 @@ View(data)`
 6. **STEP 5:** From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject. For this last step, I've chained a `group_by`, to group the filtered data set by Subject and Activity with a `summarise_each`operation, available in the dplyr package, which allows summarizing several columns. The function I've used to summarize is `mean`, so I can calculate the average of each variable as requested.
 
 Finally, I've written the tidy dataset to a .txt file, usign row.name=FALSE, so the file is written as required.
+
+##How to execute the project:
+1. Save the uncompressed original data file to any folder of your computer (UCI HAR Dataset)
+2. Save `run_analysis.R` in the same folder you have the UCI HAR Dataset folder
+3. Run the `run_analysis.R`script
+4. Verify that the proper `tidyDataset.txt`file has been created
  
 
